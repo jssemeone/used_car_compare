@@ -8,88 +8,137 @@
     <title> Car compare </title>
   </head>
   <body> 
-    <h2> Выбор подержанного авто </h2>
+    <style>
+        .header-h1 {
+            text-align: center;
+            margin-bottom: .5rem;
+        }
+        .header-h1 h1 {
+            background: #343a40;
+            margin-bottom: 0;
+            padding: .5rem 1rem;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    </style>              
+    <div class="header-h1">
+        <h1> Выбор подержанного авто </h1>
+    </div>  
     <div class="container-fluid">
-            <div class="row"> 
-                <div class="col-sm-9"> Непосредственно поле выбора
-                    <table class="table table-hover">
-                        <thead class = "thead-dark">
-                            <tr>
-                            <th scope="col"> Характеристики </th>
-                            <th scope="col"> Свой авто </th>
-                            <th scope="col"> Вариант 1</th>
-                            <th scope="col"> Вариант 2 </th>
-                            <th scope="col"> Вариант 3 </th>
-                            <th scope="col"> Вариант 4 </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row"> Марка </th>
-                            <td> Ford </td>
-                            <td> Nissan </td>
-                            <td> Renault </td>
-                            <td> Lada </td>
-                            <td> Lada </td>
-                            </tr>
-                            <tr>
-                            <th scope="row"> Модель </th>
-                            <td> Focus </td>
-                            <td> Tiida </td>
-                            <td> Logan </td>
-                            <td> 2106 </td>
-                            <td> Vesta </td>
-                            </tr>
-                            <tr>
-                            <th scope="row"> Поколение </th>
-                            <td> II </td>
-                            <td> I </td>
-                            <td> II </td>
-                            <td> I </td>
-                            <td> I </td>
-                            </tr>
-                            <tr>
-                            <th scope="row"> Комплектация </th>
-                            <td> ? </td>
-                            <td> ? </td>
-                            <td> ? </td>
-                            <td> ? </td>
-                            <td> ? </td>
-                            </tr>
-                            <tr>
-                            <th scope="row"> Средний расход топлива на 100 км (л) </th>
-                            <td> 9 </td>
-                            <td> 8 </td>
-                            <td> 8 </td>
-                            <td> 10 </td>
-                            <td> 8 </td>
-                            </tr>
-                            <th scope="row"> Средняя стоимость (тыс.руб) </th>
-                            <td> 400 </td>
-                            <td> 330 </td>
-                            <td> 200 </td>
-                            <td> 40 </td>
-                            <td> 500 </td>
-                            </tr>
-                            <th scope="row"> Стоимость налога/среднего по регионам (руб) </th>
-                            <td> 2000 </td>
-                            <td> 2000 </td>
-                            <td> 1800 </td>
-                            <td> 1400 </td>
-                            <td> 2000 </td>
-                            </tr>
-                            <th scope="row"> Стоимость ОСАГО (руб) </th>
-                            <td> 3500 </td>
-                            <td> 3500 </td>
-                            <td> 2800 </td>
-                            <td> 1800 </td>
-                            <td> 3500 </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-sm-3"> возможно парсить новости ГИБДД </div>
-    
+        <div class="row"> 
+            <div class="col-sm-9"> 
+                <table class="table table-bordered table-hover">
+                    <thead class = "thead-dark">
+                        <tr>
+                        <th scope="col"> Характеристики </th>
+                        <th scope="col"> Свой авто </th>
+                        <th scope="col"> Вариант 1</th>
+                        <th scope="col"> Вариант 2 </th>
+                        <th scope="col"> Вариант 3 </th>
+                        <th scope="col"> Вариант 4 </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row"> Марка </th>
+                        <td> Ford </td>
+                        <td> Nissan </td>
+                        <td> Renault </td>
+                        <td> Lada </td>
+                        <td> Lada </td>
+                        </tr>
+                        <tr>
+                        <th scope="row"> Модель </th>
+                        <td> Focus </td>
+                        <td> Tiida </td>
+                        <td> Logan </td>
+                        <td> 2106 </td>
+                        <td> Vesta </td>
+                        </tr>
+                        <tr>
+                        <th scope="row"> Поколение </th>
+                        <td> II </td>
+                        <td> I </td>
+                        <td> II </td>
+                        <td> I </td>
+                        <td> I </td>
+                        </tr>
+                        <tr>
+                        <th scope="row"> Комплектация </th>
+                        <td> ? </td>
+                        <td> ? </td>
+                        <td> ? </td>
+                        <td> ? </td>
+                        <td> ? </td>
+                        </tr>
+                        <tr>
+                        <th scope="row"> Средний расход топлива на 100 км (л) </th>
+                        <td> 9 </td>
+                        <td> 8 </td>
+                        <td> 8 </td>
+                        <td> 10 </td>
+                        <td> 8 </td>
+                        </tr>
+                        <th scope="row"> Средняя стоимость (тыс.руб) </th>
+                        <td> 400 </td>
+                        <td> 330 </td>
+                        <td> 200 </td>
+                        <td> 40 </td>
+                        <td> 500 </td>
+                        </tr>
+                        <th scope="row"> Стоимость налога/среднего по регионам (руб) </th>
+                        <td> 2000 </td>
+                        <td> 2000 </td>
+                        <td> 1800 </td>
+                        <td> 1400 </td>
+                        <td> 2000 </td>
+                        </tr>
+                        <th scope="row"> Стоимость ОСАГО (руб) </th>
+                        <td> 3500 </td>
+                        <td> 3500 </td>
+                        <td> 2800 </td>
+                        <td> 1800 </td>
+                        <td> 3500 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-3"> возможно парсить новости ГИБДД </div>
+        </div>
+        <footer>
+            <style>
+                .footer-1 {
+                    text-align: center;
+                    margin-bottom: .5rem;
+                }
+                .footer-1 h1 {
+                    background: #343a40;
+                    margin-bottom: 0;
+                    padding: .5rem 1rem;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+                .footer-1 a {
+                    background: #343a40;
+                    margin-bottom: 0;
+                    padding: .5rem 1rem;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            </style>     
+            <div class="footer-1">
+                <h1> © 2019 Copyright: 
+                    <a href="https://www.instagram.com/jssemeone/"> 7on-off </a> &
+                    <a href="https://www.instagram.com/tattis_beads/"> Tatti </a>
+                </h1>
+            </div>
+              
+        </footer>
+                          
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

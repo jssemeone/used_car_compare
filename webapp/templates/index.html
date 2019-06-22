@@ -104,8 +104,13 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-sm-3"> возможно парсить новости ГИБДД </div>
-        </div>
+            <div class="col-sm-3"> 
+                <h2> возможно парсить новости ГИБДД </h2>
+                {% for news in news_list %}
+                <h3><a href = "{{ news.url }}"> {{ news.title }} </a></h3>
+                {% endfor%}
+        
+            </div>
         <footer>
             <style>
                 .footer-1 {
@@ -113,7 +118,7 @@
                     margin-bottom: .5rem;
                 }
                 .footer-1 h1 {
-                    background: #ff1212;
+                    background: #343a40;
                     margin-bottom: 0;
                     padding: .5rem 1rem;
                     font-size: 0.8rem;

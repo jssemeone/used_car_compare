@@ -8,7 +8,7 @@ def create_app():
 
     @app.route("/")
     def main():
-        news_list = get_gibdd_news
+        news_list = get_gibdd_news()
         return render_template('index.html', news_list = news_list)
 
     return app

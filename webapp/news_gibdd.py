@@ -11,7 +11,7 @@ def get_html(url):
         return False
 
 
-def get_gibdd_news(html):
+def get_gibdd_news():
     html = get_html("https://xn--90adear.xn--p1ai/news/federal")
     if html:
         soup = BeautifulSoup(html, 'html.parser')

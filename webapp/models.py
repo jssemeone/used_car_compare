@@ -12,7 +12,9 @@ def get_html(url):
 
 def get_auto_specifications(html):
     soup = BeautifulSoup(html, 'html.parser')
-    all_specific = soup.find(class_="b-model-specs").findAll(class_="bm-modelSpecsGroup")
+    # all_specific = soup.find(class_="b-model-specs").findAll(class_="bm-modelSpecsGroup")
+    all_specific = soup.findAll(string=["Мощность", "Объем", "Расход"])
+    all_specific.find_all_next(class_="b-model-specs__text")
     print(all_specific)
 
 if __name__ == "__main__":
@@ -20,3 +22,6 @@ if __name__ == "__main__":
         if html:
             get_auto_specifications(html)
 
+# soup.find_all(string=["Tillie", "Elsie", "Lacie"])
+# # [u'Elsie', u'Lacie', u'Tillie']
+# soup.find('div', 'content')

@@ -1,0 +1,1 @@
+NEWS_URL = "https://xn--90adear.xn--p1ai/news/federal"

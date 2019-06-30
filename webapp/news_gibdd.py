@@ -1,3 +1,4 @@
+from flask import current_app
 import requests
 from bs4 import BeautifulSoup
 
@@ -12,7 +13,7 @@ def get_html(url):
 
 
 def get_gibdd_news():
-    html = get_html("https://xn--90adear.xn--p1ai/news/federal")
+    html = get_html(current_app.config["NEWS_URL"])
     if html:
         soup = BeautifulSoup(html, 'html.parser')
         news_list = soup.find_all(class_="sl-item")

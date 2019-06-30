@@ -5,6 +5,7 @@ from webapp.news_gibdd import get_gibdd_news
 
 def create_app():
     app = Flask(__name__)
+    app.config.from_pyfile("config.py")
 
     @app.route("/")
     def main():

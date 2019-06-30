@@ -20,7 +20,7 @@ def get_gibdd_news():
         for news in news_list:
             title = news.find(class_='sl-item-title').find('a').text
             news_highlight = news.find(class_="sl-item-text").text
-            url = news.find("a")['href']
+            url = "https://xn--90adear.xn--p1ai" + news.find("a")['href']
             published_date = news.find(class_="sl-item-date").text
             result_news.append({
                 'title': title,

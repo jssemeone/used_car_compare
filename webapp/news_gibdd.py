@@ -1,6 +1,7 @@
 from flask import current_app
 import requests
 from bs4 import BeautifulSoup
+from webapp.model import db, News
 
 def get_html(url):
     try:
@@ -23,6 +24,8 @@ def get_gibdd_news():
             news_highlight = news.find(class_="sl-item-text").text
             url = "https://xn--90adear.xn--p1ai" + news.find("a")['href']
             published_date = news.find(class_="sl-item-date").text
+            published_date = published_date.split()
+            published_date = ' '.join(published_date)
             result_news.append({
                 'title': title,
                 'news_highlight': news_highlight,
@@ -30,4 +33,11 @@ def get_gibdd_news():
                 'published_date': published_date
             })
         return result_news
-    return False        
+    return False   
+
+def save_news(title, url, published_date):
+    news_exists = News.query.filter(News.url == url).count()
+    if not news_exists:
+        new_news = News(title=title, url=url, published_date=published_date)
+        db.session.add(new_news)
+        db.session.commit()     

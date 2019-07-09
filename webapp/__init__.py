@@ -1,6 +1,6 @@
 from flask import current_app
+from webapp.model import db, News
 from flask import Flask, render_template
-from webapp.news_gibdd import get_gibdd_news
 
 
 def create_app():
@@ -9,7 +9,7 @@ def create_app():
 
     @app.route("/")
     def main():
-        news_list = get_gibdd_news()
+        news_list = News.query.all()
         return render_template('index.html', news_list = news_list)
 
     return app

@@ -1,4 +1,4 @@
 .env
 __pycache__
-webapp.db
+*.db
 README.md

@@ -1,4 +1,3 @@
-from flask import current_app
 from webapp.model import db, News
 from flask import Flask, render_template
 

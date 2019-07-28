@@ -9,7 +9,7 @@ def create_app():
 
     @app.route("/")
     def main():
-        news_list = News.query.limit(7).all()
+        news_list = News.query.limit(5).all()
         return render_template('index.html', news_list = news_list)
 
     return app

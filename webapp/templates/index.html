@@ -99,6 +99,15 @@
                 </table>
             </div>
             <div class="col-sm-3">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div class="alert alert-warning" role="alert">
+                        {% for message in messages %}
+                            {{ message }}<br>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                {% endwith %}
                 <div class="col-sm-3-news">
                     <div class="news-h3">
                         <h3> новости ГИБДД </h3>

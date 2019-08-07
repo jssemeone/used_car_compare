@@ -1,7 +1,9 @@
-from flask_login import LoginManager, login_user, logout_user
-from webapp.model import db, News, User
 from flask import Flask, render_template, flash, redirect, url_for
+from flask_login import LoginManager, login_user, logout_user
 from webapp.forms import LoginForm
+from webapp.model import db, News, User
+
+
 
 
 def create_app():
@@ -12,6 +14,10 @@ def create_app():
     login_manager = LoginManager()
     login_manager.init_app(app)
     login_manager.login_view = 'login'
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(user_id)
 
     @app.route("/")
     def main():

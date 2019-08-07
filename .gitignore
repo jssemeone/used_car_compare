@@ -1,8 +1,5 @@
 .env
 __pycache__
-<<<<<<< HEAD
 *.db
 README.md
-=======
 .vscode
->>>>>>> d45c1b306c20f73acd1319d67f18203199f22c38
